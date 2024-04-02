@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap");
+.expenseContainer {
+  width: 50%;
+  margin: 20px;
+}
+
+.showExpensesContainer {
+  padding: 20px;
+  background-color: #f0f2f5;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.showExpensesList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.showExpensesList li {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.showExpensesList li:last-child {
+  margin-bottom: 0;
+}
+.btncls {
+  display: flex;
+  justify-content: space-between;
+}
+.expenseItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.left {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.dateText {
+  font-family: "Open Sans", sans-serif; /* Ensure 'Open Sans' font is imported or available */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.79px;
+  text-align: center;
+  color: rgba(155, 155, 155, 1);
+  /* color: #ffffff; Adding color for better visibility on the background */
+  /* padding: 5px; Optional: for some space around the text */
+  border-radius: 4px; /* Optional: if you want rounded corners */
+}
+
+.right {
+  display: inline-flex;
+  align-items: center; /* This ensures vertical centering of children */
+  justify-content: space-between;
+  text-align: right;
+}
+
+.right span {
+  margin-right: auto; /* Pushes the buttons to the right */
+}
+.right button {
+  margin-left: 8px; /* Keeps space between the buttons */
+  border: none; /* Removes the default border */
+  background-color: #4caf50; /* Example background color; adjust as needed */
+  color: white; /* Color of the icon/text inside the button */
+  padding: 10px; /* Adjust padding to scale the size of the button */
+  width: 40px; /* Sets the width of the button */
+  height: 40px; /* Sets the height of the button to match the width, making it a square */
+  border-radius: 50%; /* Rounds the corners to make the square a circle */
+  cursor: pointer; /* Changes the mouse cursor to a pointer on hover */
+  display: inline-flex; /* Uses flexbox to center the content */
+  align-items: center; /* Centers the content vertically */
+  justify-content: center; /* Centers the content horizontally */
+}
+
+.right button:hover {
+  background-color: #45a049; /* Slightly darker shade for hover effect */
+}
+@media (max-width: 768px) {
+  .right button {
+    width: 30px; /* Smaller size for smaller screens */
+    height: 30px; /* Smaller size for smaller screens */
+    padding: 8px; /* Adjust padding as needed */
+  }
+}

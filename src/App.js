@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import Expense from "./Component/Expenses/Expense";
+import NewExpense from "./Component/NewExpenses/NewExpense";
+import { ContextProvider } from "./ContextProvider";
+import ShowExpense from "./Component/ShowExpenses/ShowExpense";
+import HeroSection from "./UI/HeroSection";
+import BodySection from "./UI/BodySection";
+import { SnackbarProvider, useSnackbar } from "notistack";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h2>Expense Tracker</h2>
+      <SnackbarProvider>
+        <ContextProvider>
+          <HeroSection />
+          <BodySection />
+        </ContextProvider>
+      </SnackbarProvider>
+    </>
   );
 }
 
